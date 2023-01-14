@@ -2,39 +2,16 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<title>Products</title>
-</head>
-<body>
-	<section>
-		<div class="pull-left" style="padding-left:50px">
-			<a href="<c:url value="/logout"/>">Logout</a>		
-		</div>
-	</section>
-	
-	<section>
-		<div class="jumbotron">
-			<div class="container">
-				<h1>Products</h1>
-				<p>All the available products in our store</p>
-			</div>
-		</div>
-	</section>
-	
+
 	<section class="container">
 		<div class="row">
 			<c:forEach items="${products}" var="product">
-				<div class="col-sm-6 col-md-3" style="padding-bottom: 16px">
+				<div class="col-sm-6 col-md-3" style="padding-bottom: 16px;">
 				<div class="thumbnail">
-					<img src="<c:url value="/img/${product.productId}.png">
-					</c:url>" alt="image" style = "width:100%"/>
+					<img src="<c:url value="/img/${product.productId}.png"/>" alt="image" style = "width:100%; height:250px;"/>
 					<div class="caption">
 						<h3>${product.name}</h3>
-						<p>${product.description}</p>
+						<p style="overflow: hidden; height: 60px; text-overflow: ellipsis;">${product.description}</p>
 						<p>$${product.unitPrice}</p>
 						<p>Available ${product.unitsInStock} units in stock</p>
 					
@@ -45,9 +22,7 @@
 						</p>
 					</div>
 				</div>
-			</div>
+				</div>
 			</c:forEach>
 		</div>
 	</section>
-</body>
-</html>
