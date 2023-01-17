@@ -150,7 +150,7 @@ public class WebApplicationContextConfig extends WebMvcConfigurerAdapter {
 	public ProductValidator productValidator() {
 		Set<Validator> springValidators = new HashSet<>();
 		springValidators.add(new UnitsInStockValidator());
-		springValidators.add(new ProductImageValidator(10240));
+		springValidators.add(new ProductImageValidator(102400));
 		
 		ProductValidator productValidator = new ProductValidator();
 		productValidator.setSpringValidators(springValidators);

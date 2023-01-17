@@ -28,3 +28,6 @@ More in [src/main/resources/db/sql/create-table.sql](https://github.com/kimduong
 
 # Related book
 Spring MVC: Beginner's Guide Second Edition - Amuthan Ganeshan
+
+# Some information about WEBSTORE
+You can see showcase of the application in [showcase](./showcase.md)
