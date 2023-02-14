@@ -25,6 +25,7 @@ More in [src/main/resources/db/sql/create-table.sql](https://github.com/kimduong
 1. Clone repository 
 2. Download Tomcat Server 8.5
 3.  Run on Server
+4. ADMIN USER for using all feature: id:admin - password:root123
 
 # Related book
 Spring MVC: Beginner's Guide Second Edition - Amuthan Ganeshan
